@@ -1,0 +1,277 @@
+/* Fonts are linked from index.html (fetched in parallel with this file). */
+@import "tailwindcss";
+
+/* Tailwind scans every file under the project root for class names. Keep it
+   out of folders that are not app source: the pre-redesign backup (old class
+   names would be generated for nothing) and tool state under .claude, whose
+   files change constantly and would trigger a full page reload each time. */
+@source not "../.backup";
+@source not "../.claude";
+@source not "../server";
+@source not "../dist";
+
+/* Two families, each with a full Vietnamese glyph set so no word falls back
+   to a system font mid-syllable (ệ, ướ, ẫ, ữ…):
+   - Be Vietnam Pro for interface chrome (navigation, buttons, tables).
+   - Literata for book text and titles. It was drawn for long-form e-reading,
+     which is what the English/Vietnamese columns are.
+
+   Colors are semantic tokens rather than palette steps so the dark theme is
+   a single variable override below, with no per-component dark classes. The
+   accent is the blue-violet of school fountain-pen ink ("mực tím"); flag red
+   is the teacher's correcting pen; marker yellow is a highlighter. */
+@theme {
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Literata", Georgia, "Times New Roman", ui-serif, serif;
+
+  /* One type scale for the whole interface, named by role. Interface text is
+     Be Vietnam Pro; headings and book text are Literata. Sizes are in rem, so
+     the whole interface follows the root size below (screen width and the
+     "Cỡ chữ giao diện" setting) and the browser's own font size. At a 16px
+     root:
+       caption  13  labels, timestamps, fine print
+       meta     14  secondary lines, table cells, buttons (small)
+       body     15  default interface text
+       lead     16  emphasised interface text, list titles
+       heading  19  card and panel headings (serif)
+       title    21  section headings (serif)
+       headline 29  page titles (serif)  — not "page": that name is the paper colour
+       display  33  a book's or chapter's own title (serif) */
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.45;
+  --text-meta: 0.875rem;
+  --text-meta--line-height: 1.5;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.55;
+  --text-lead: 1rem;
+  --text-lead--line-height: 1.5;
+  --text-heading: 1.1875rem;
+  --text-heading--line-height: 1.35;
+  --text-title: 1.3125rem;
+  --text-title--line-height: 1.3;
+  --text-headline: 1.8125rem;
+  --text-headline--line-height: 1.2;
+  --text-display: 2.0625rem;
+  --text-display--line-height: 1.15;
+
+  --color-desk: #eef0f4;
+  --color-page: #ffffff;
+  --color-sunken: #f4f5f8;
+  --color-ink: #1a2233;
+  --color-soft: #4c5568;
+  --color-mute: #6b7487;
+  --color-rule: #dde1e8;
+
+  /* Brand teal (books.metta.family logo, design/logo/). */
+  --color-accent: #14696a;
+  --color-accent-strong: #0f5556;
+  --color-accent-soft: #e1f0ee;
+  --color-on-accent: #ffffff;
+
+  --color-marker: #ffd84a;
+  --color-marker-soft: #fff5c4;
+  --color-flag: #c2362a;
+  --color-flag-soft: #fbe9e6;
+  --color-ok: #1f7a55;
+  --color-ok-soft: #e2f3ea;
+  --color-warn: #96600a;
+  --color-warn-soft: #fbf0d6;
+  /* the gold half of the logo ring, for brand text (metta in the wordmark) */
+  --color-brand-gold: #9f7419;
+
+  /* Single-series chart marks (validated with the dataviz palette checker
+     against the light and dark surfaces). */
+  --color-chart: #14696a;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-desk: #11141a;
+  --color-page: #1a1f29;
+  --color-sunken: #222836;
+  --color-ink: #e7eaf1;
+  --color-soft: #b4bccb;
+  --color-mute: #8d97aa;
+  --color-rule: #2d3443;
+
+  --color-accent: #5cbfb7;
+  --color-accent-strong: #8ad6cf;
+  --color-accent-soft: #173a39;
+  --color-on-accent: #0a1f1f;
+
+  --color-marker: #d9b52c;
+  --color-marker-soft: #3d3712;
+  --color-flag: #f08a7e;
+  --color-flag-soft: #43211d;
+  --color-ok: #63c99c;
+  --color-ok-soft: #17382b;
+  --color-warn: #e3b04b;
+  --color-warn-soft: #3b2f12;
+  --color-brand-gold: #e2b955;
+
+  --color-chart: #5cbfb7;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* The root size, which every rem (type and spacing) follows: the browser's
+   default (normally 16px) on small screens, growing with the window up to
+   18px on wide ones (a 13" MacBook at ~1440px gets ~17px), times the
+   reader's "Cỡ chữ giao diện" choice (--ui-scale on <html>, set by
+   LayoutSettingsContext). */
+html {
+  scroll-behavior: smooth;
+  font-size: calc(clamp(1rem, 0.5vw + 0.55rem, 1.125rem) * var(--ui-scale, 1));
+}
+
+body {
+  @apply bg-desk text-ink antialiased;
+}
+
+/* One visible focus treatment for every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Book text: the English and Vietnamese columns. Serif by default; the
+   "Sans" reading-font setting swaps the family on the chapter wrapper. */
+.book-text {
+  font-family: var(--font-serif);
+  line-height: 1.72;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  font-synthesis: none;
+  white-space: pre-wrap;
+  hanging-punctuation: first;
+}
+.reading-sans .book-text {
+  font-family: var(--font-sans);
+  line-height: 1.72;
+}
+
+/* **bold** in a translated cell marks a term explained in the notes column.
+   A translated paragraph can carry a dozen of them, so the tint is mixed
+   halfway back toward the text color: findable, without turning the
+   paragraph into a patchwork. */
+.book-text strong {
+  font-weight: 600;
+  color: color-mix(in srgb, var(--color-accent) 55%, var(--color-ink));
+}
+
+/* Visual editor (RichEditor.jsx): formatting looks the way it is rendered
+   in the chapter, and an empty editor shows its placeholder. */
+.rich-editor:empty::before,
+.rich-editor:has(> div:only-child > br:only-child)::before,
+.rich-editor:has(> ul:only-child > li:only-child > br:only-child)::before {
+  content: attr(data-placeholder);
+  color: var(--color-mute);
+  pointer-events: none;
+  position: absolute;
+}
+.rich-editor:has(> ul:only-child > li:only-child > br:only-child)::before {
+  margin-left: 1.25rem;
+}
+.rich-editor {
+  position: relative;
+}
+/* Weight only: the color comes from the field's reading style (.book-text
+   strong for the book columns, ink for the notes), as in reading mode. */
+.rich-editor strong,
+.rich-editor b {
+  font-weight: 600;
+}
+.rich-editor mark {
+  background-color: var(--color-marker-soft);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.1em;
+}
+.rich-editor u {
+  text-underline-offset: 3px;
+}
+.rich-editor ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.rich-editor li + li {
+  margin-top: 0.25rem;
+}
+
+/* Read-along while a paragraph is spoken: the sentence gets a band, the
+   word a marker stroke. The band is drawn on every word and inner space of
+   the sentence; vertical padding makes neighbouring lines' backgrounds meet
+   so the band reads as one continuous highlight instead of strips with
+   white gaps between lines (the text's line-height is much taller than the
+   glyphs). Padding on inline boxes does not move the text. The color is
+   opaque (mixed with the page, not transparent) because the padded boxes of
+   two lines overlap slightly, and a translucent fill would darken there. */
+.read-sentence {
+  background-color: color-mix(in srgb, var(--color-accent) 16%, var(--color-page));
+  padding-block: 0.32em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.read-word {
+  background-color: var(--color-marker);
+  color: #1a2233;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px var(--color-marker);
+}
+
+/* Per-paragraph actions float above the row and stay out of the way until
+   the row is hovered or a control inside is focused. On touch screens and
+   narrow layouts there is no hover, so they are always shown. */
+@media (min-width: 1024px) and (hover: hover) {
+  .row-actions {
+    opacity: 0;
+    transition: opacity 120ms;
+  }
+  .para-row:hover .row-actions,
+  .row-actions:focus-within,
+  .row-actions[data-pinned="true"] {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* A term discussion being viewed (TermDiscussion focusThreadInText): its
+   sentence as context, the discussed words stronger. CSS Custom Highlight
+   API, so the paragraph's own markup is untouched. */
+::highlight(thread-context) {
+  background-color: color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+::highlight(thread-term) {
+  background-color: color-mix(in srgb, var(--color-marker) 70%, transparent);
+  color: var(--color-ink);
+}
+
+/* Brand assets drawn for one background (components/Brand.jsx). */
+:root[data-theme="dark"] .theme-light-only,
+:root:not([data-theme="dark"]) .theme-dark-only {
+  display: none;
+}

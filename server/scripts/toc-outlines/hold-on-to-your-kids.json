@@ -1,0 +1,70 @@
+{
+  "about": "Complete TOC of 'Hold On to Your Kids' (Neufeld & Maté, 2024 edition), English exactly as printed. Cover, Title Page, Copyright, Contents and Index are not content to translate and are left out. Vietnamese titles of chapters already in the app are kept (title_vi omitted).",
+  "front": [
+    { "title_en": "Epigraph", "title_vi": "Đề từ" },
+    { "title_en": "Note to the Reader", "title_vi": "Lời nhắn đến bạn đọc" },
+    { "title_en": "Dedication", "title_vi": "Lời đề tặng" }
+  ],
+  "parts": [
+    {
+      "title_en": "The Phenomenon of Peer Orientation",
+      "chapters": [
+        { "title_en": "Why Parents Matter More Than Ever" },
+        { "title_en": "Skewed Attachments, Subverted Instincts" },
+        { "title_en": "Why We’ve Come Undone" }
+      ]
+    },
+    {
+      "title_en": "Sabotaged: How Peer Orientation Undermines Parenting",
+      "chapters": [
+        { "title_en": "The Power to Parent Is Slipping Away" },
+        { "title_en": "From Help to Hindrance: When Attachment Works Against Us" },
+        { "title_en": "Counterwill: Why Children Become Disobedient" },
+        { "title_en": "The Flatlining of Culture" }
+      ]
+    },
+    {
+      "title_en": "Stuck in Immaturity: How Peer Orientation Stunts Healthy Development",
+      "chapters": [
+        { "title_en": "The Dangerous Flight from Feeling" },
+        { "title_en": "Stuck in Immaturity", "title_vi": "Mắc kẹt trong sự non nớt" },
+        { "title_en": "A Legacy of Aggression", "title_vi": "Di sản của sự hung hăng" },
+        { "title_en": "The Making of Bullies and Victims", "title_vi": "Kẻ bắt nạt và nạn nhân được tạo ra như thế nào" },
+        { "title_en": "A Sexual Turn", "title_vi": "Bước ngoặt tình dục" },
+        { "title_en": "Unteachable Students", "title_vi": "Những học sinh không thể dạy dỗ" }
+      ]
+    },
+    {
+      "title_en": "How to Hold on to Our Kids (or How to Reclaim Them)",
+      "title_vi": "Làm thế nào để giữ con ở bên mình (hay làm thế nào để giành lại con)",
+      "chapters": [
+        { "title_en": "Collecting Our Children", "title_vi": "Thu hút con về phía mình" },
+        { "title_en": "Preserve the Ties That Empower", "title_vi": "Gìn giữ những mối dây tiếp sức" },
+        { "title_en": "Discipline That Does Not Divide", "title_vi": "Kỷ luật không gây chia cắt" }
+      ]
+    },
+    {
+      "title_en": "Preventing Peer Orientation",
+      "title_vi": "Phòng ngừa xu hướng hướng về bạn bè",
+      "chapters": [
+        { "title_en": "Don’t Court the Competition", "title_vi": "Đừng tiếp tay cho đối thủ cạnh tranh" },
+        { "title_en": "Re-Create the Attachment Village", "title_vi": "Dựng lại ngôi làng gắn bó" }
+      ]
+    },
+    {
+      "title_en": "A Postscript for the Digital Age (How to Hold on to Kids in the Era of Internet, Cell Phones, and Video Games)",
+      "title_vi": "Lời bạt cho thời đại số (Làm thế nào để giữ con trong kỷ nguyên Internet, điện thoại di động và trò chơi điện tử)",
+      "chapters": [
+        { "title_en": "The Digital Revolution Bent Out of Shape", "title_vi": "Cuộc cách mạng số bị bẻ cong" },
+        { "title_en": "A Matter of Timing", "title_vi": "Vấn đề thời điểm" },
+        { "title_en": "In Wake of the Pandemic: Peer Orientation and the Youth Mental Health Crisis", "title_vi": "Sau đại dịch: Xu hướng hướng về bạn bè và cuộc khủng hoảng sức khoẻ tinh thần ở giới trẻ" }
+      ]
+    }
+  ],
+  "back": [
+    { "title_en": "Acknowledgments", "title_vi": "Lời cảm ơn" },
+    { "title_en": "Glossary", "title_vi": "Bảng thuật ngữ" },
+    { "title_en": "Notes", "title_vi": "Chú thích" },
+    { "title_en": "About the Authors", "title_vi": "Về các tác giả" }
+  ]
+}

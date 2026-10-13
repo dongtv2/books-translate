@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Đọc song ngữ Anh – Việt những cuốn sách về gắn kết và yêu thương: dịch từng đoạn cùng nhau, học từ mới ngay trên trang sách." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#14696a" />
+    <meta name="apple-mobile-web-app-title" content="Books" />
+    <link rel="canonical" href="https://books.metta.family/" />
+    <!-- Link previews (Zalo, Messenger, Slack, …) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="books.metta.family" />
+    <meta property="og:title" content="books.metta.family — Đọc để hiểu, hiểu để thương" />
+    <meta property="og:description" content="Đọc song ngữ Anh – Việt những cuốn sách về gắn kết và yêu thương: dịch từng đoạn cùng nhau, học từ mới ngay trên trang sách. Stories for Connection &amp; Kindness." />
+    <meta property="og:url" content="https://books.metta.family/" />
+    <meta property="og:image" content="https://books.metta.family/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap" />
+    <title>books.metta.family — Đọc để hiểu, hiểu để thương</title>
+    <script>
+      // Set the theme before first paint so a dark-theme reader never sees a
+      // white flash. LayoutSettingsContext keeps it in sync afterwards.
+      try {
+        var t = (JSON.parse(localStorage.getItem('bt_layout_settings') || '{}').theme) || 'system';
+        if (t === 'system') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

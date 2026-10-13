@@ -1,0 +1,51 @@
+{
+  "book": "The Art of Dying (Vipassana Research Publications, 2014)",
+  "source": "Table of Contents of the English edition; Vietnamese titles from the team's FINALIZE column",
+  "chapters": [
+    { "kind": "front", "title_en": "Epigraph", "title_vi": "Đề từ", "start": "Manopubbaṅgamā", "headingBlocks": 0, "blockType": "epigraph" },
+    { "kind": "front", "title_en": "Dedication", "start": "Dedication" },
+    { "kind": "front", "title_en": "Preface", "start": "Preface" },
+    { "kind": "front", "title_en": "About S.N. Goenka", "start": "About S.N. Goenka" },
+    { "kind": "front", "title_en": "The Passing of the Day", "start": "The Passing of the Day" },
+    { "kind": "front", "title_en": "About This Book", "title_vi": "Đôi dòng về sách này", "start": "About This Book" },
+    { "kind": "front", "title_en": "About Vipassana Meditation", "title_vi": "Về thiền Vipassana", "start": "About Vipassana Meditation" },
+
+    { "title_en": "My Mother’s Death in Dhamma", "start": "My Mother’s Death in Dhamma" },
+    { "title_en": "The Buddha’s Wisdom", "start": "The Buddha’s Wisdom" },
+    { "title_en": "As It Was / As It Is", "start": "As It Was / As It Is" },
+    { "title_en": "Graham’s Death", "start": "Graham’s Death" },
+    { "title_en": "What Happens at Death", "start": "What Happens at Death" },
+    { "title_en": "Paṭicca Samuppāda—The Law of Dependent Origination", "title_vi": "Paṭicca Samuppāda — Quy luật về nguồn gốc phụ thuộc", "start": "Paṭicca Samuppāda", "headingBlocks": 2 },
+    { "title_en": "Tara Jadhav: An Exemplary Death", "start": "An Exemplary Death" },
+    { "title_en": "Questions to Goenkaji I: Supporting Loved Ones at the Time of Death", "start": "Questions to Goenkaji I", "headingBlocks": 2 },
+    { "title_en": "Susan Babbitt: Only the Present Moment", "start": "Only the Present Moment" },
+    { "title_en": "Kamma—The Real Inheritance", "start": "Kamma—the Real Inheritance" },
+    { "title_en": "Rodney Bernier: Smiling All the Way to Death", "start": "Smiling All the Way to Death" },
+    { "title_en": "Questions to Goenkaji II: Preparing for Our Own Deaths", "start": "Questions to Goenkaji II", "headingBlocks": 2 },
+    { "title_en": "Ratilal Mehta: A Life and Death in Dhamma", "start": "A Life and Death in Dhamma" },
+    { "title_en": "Parvathamma Adaviappa: Equanimity in the Face of Terminal Illness", "start": "Equanimity in the Face of Terminal Illness" },
+    { "title_en": "The Flood of Tears", "start": "The Flood of Tears" },
+    { "title_en": "The Deaths of Our Children", "start": "The Deaths of Our Children" },
+    { "title_en": "An Invaluable Gift", "start": "An Invaluable Gift" },
+    {
+      "title_en": "Undying Gratitude", "start": "Undying Gratitude",
+      "sections": [
+        { "heading_en": "From John’s Mother", "start": "From John’s Mother" },
+        { "heading_en": "Second story", "start": "Second story" },
+        { "heading_en": "Third story", "start": "Third story" },
+        { "heading_en": "Three years later", "start": "Three years later" }
+      ]
+    },
+    { "title_en": "Work Out Your Own Salvation", "start": "Work Out Your Own Salvation" },
+    { "title_en": "Hiding from the Wisdom of Anicca", "start": "Hiding from the Wisdom of Anicca" },
+    { "title_en": "Ambapālī’s Verses", "start": "Ambapālī’s Verses" },
+    { "title_en": "Questions to Goenkaji III: Ethical Questions in the Age of Modern Medicine", "start": "Questions to Goenkaji III", "headingBlocks": 2 },
+    { "title_en": "Terrell Jones: Facing Death Head-on", "start": "Facing Death Head-on" },
+    { "title_en": "70 Years Are Over", "start": "70 Years Are Over" },
+
+    { "kind": "back", "title_en": "Appendix: The Art of Living: Vipassana Meditation", "title_vi": "Phụ lục: Nghệ thuật sống: Thiền Vipassana", "start": "Appendix", "headingBlocks": 2 },
+    { "kind": "back", "title_en": "The Practice of Mettā Bhāvanā in Vipassana Meditation", "start": "The Practice of Mettā Bhāvanā" },
+    { "kind": "back", "title_en": "Acknowledgments", "start": "Acknowledgments" },
+    { "kind": "back", "title_en": "Glossary", "start": "Glossary" }
+  ]
+}

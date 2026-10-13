@@ -1,0 +1,29 @@
+{
+  "name": "books.metta.family",
+  "short_name": "Books",
+  "description": "Đọc để hiểu, hiểu để thương. Đọc song ngữ Anh – Việt những cuốn sách về gắn kết và yêu thương: dịch từng đoạn cùng nhau, học từ mới ngay trên trang sách.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "vi",
+  "background_color": "#f7f3ea",
+  "theme_color": "#14696a",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "books-translate",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "vite",
+    "dev:server": "node --watch --watch-preserve-output server/index.js",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test:activity": "node server/test/activity.test.mjs",
+    "test": "node server/workflow/test/checks.test.mjs && node server/test/withDbCopy.mjs server/workflow/test/engine.test.mjs && node server/test/activity.test.mjs && node server/test/database.test.mjs && node server/test/bookAccess.test.mjs && node server/test/vocabScopes.test.mjs && node server/test/vocabSenses.test.mjs && node server/test/bookCovers.test.mjs && node server/test/security.test.mjs && node server/test/hybrid.test.mjs && node server/test/toc.test.mjs && node server/test/genres.test.mjs",
+    "db:backup": "node server/scripts/backupNow.mjs",
+    "db:restore": "node server/scripts/restoreBackup.mjs",
+    "test:database": "node server/test/database.test.mjs",
+    "test:access": "node server/test/bookAccess.test.mjs",
+    "test:vocab-scopes": "node server/test/vocabScopes.test.mjs",
+    "test:vocab-senses": "node server/test/vocabSenses.test.mjs",
+    "test:covers": "node server/test/bookCovers.test.mjs",
+    "test:hybrid": "node server/test/hybrid.test.mjs",
+    "test:security": "node server/test/security.test.mjs",
+    "test:engine": "node server/test/withDbCopy.mjs server/workflow/test/engine.test.mjs",
+    "toc:normalize": "node server/scripts/normalizeToc.mjs",
+    "test:toc": "node server/test/toc.test.mjs",
+    "test:genres": "node server/test/genres.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "better-sqlite3": "^13.0.3",
+    "cheerio": "^1.2.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "lucide-react": "^1.50.0",
+    "mammoth": "^1.12.3",
+    "multer": "^2.4.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "oxlint": "^1.81.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true
+  }
+}

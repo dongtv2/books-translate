@@ -1,0 +1,22 @@
+{
+  "about": "House-style pass over the team's FINALIZE titles (wording unchanged): spaced en dash, 'Hỏi đáp với Goenkaji – Phần n', the person's name in front as in the English TOC, Title Case for English section headings.",
+  "chapters": [
+    { "en": "As It Was / As It Is", "title_vi": "Như đã là / Như đang là" },
+    { "en": "Paṭicca Samuppāda—The Law of Dependent Origination", "title_vi": "Paṭicca Samuppāda – Quy luật về nguồn gốc phụ thuộc" },
+    { "en": "Tara Jadhav: An Exemplary Death", "title_vi": "Tara Jadhav: Một cái chết mẫu mực" },
+    { "en": "Questions to Goenkaji I: Supporting Loved Ones at the Time of Death", "title_vi": "Hỏi đáp với Goenkaji – Phần 1: Hỗ trợ những người thân yêu vào lúc sắp qua đời" },
+    { "en": "Susan Babbitt: Only the Present Moment", "title_vi": "Susan Babbitt: Chỉ khoảnh khắc hiện tại" },
+    { "en": "Kamma—The Real Inheritance", "title_vi": "Kamma – Di sản đích thực" },
+    { "en": "Rodney Bernier: Smiling All the Way to Death", "title_vi": "Rodney Bernier: Luôn mỉm cười suốt chặng đường đi đến cái chết" },
+    { "en": "Questions to Goenkaji II: Preparing for Our Own Deaths", "title_vi": "Hỏi đáp với Goenkaji – Phần 2: Chuẩn bị cho cái chết của chính mình" },
+    { "en": "Ratilal Mehta: A Life and Death in Dhamma", "title_vi": "Ratilal Mehta: Cuộc đời và cái chết trong Dhamma" },
+    { "en": "Parvathamma Adaviappa: Equanimity in the Face of Terminal Illness", "title_vi": "Parvathamma Adaviappa: Bình tâm đối mặt bệnh nan y" },
+    { "en": "Questions to Goenkaji III: Ethical Questions in the Age of Modern Medicine", "title_vi": "Hỏi đáp với Goenkaji – Phần 3: Những câu hỏi y đức dành cho y học hiện đại" },
+    { "en": "Terrell Jones: Facing Death Head-on", "title_en": "Terrell Jones: Facing Death Head-On", "title_vi": "Terrell Jones: Đối diện với cái chết" }
+  ],
+  "sections": [
+    { "en": "Second story", "heading_en": "Second Story", "heading_vi": "Câu chuyện thứ hai" },
+    { "en": "Third story", "heading_en": "Third Story", "heading_vi": "Câu chuyện thứ ba" },
+    { "en": "Three years later", "heading_en": "Three Years Later", "heading_vi": "Ba năm sau" }
+  ]
+}
